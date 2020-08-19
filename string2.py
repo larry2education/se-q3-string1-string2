@@ -4,7 +4,7 @@ Kenzie assignment: String2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Larry Scott with help from Howard and demo recording"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -12,7 +12,7 @@ __author__ = "???"
 
 # Instructions:
 # Complete each of these string exercises in the same way as the
-# previous String1 excercises.
+# previous String1 exercises.
 
 # D. verbing
 # Given a string, if its length is at least 3, add 'ing' to its
@@ -23,8 +23,12 @@ __author__ = "???"
 
 
 def verbing(s):
-    # your code here
-    return
+    if len(s) >= 3:
+        if s[-3:] == "ing":
+            s += "ly"
+        else:
+            s += "ing"
+    return s
 
 
 # E. not_bad
@@ -37,8 +41,15 @@ def verbing(s):
 
 
 def not_bad(s):
-    # your code here
-    return
+    str_not = s.find("not", 0, len(s))
+    str_bad = s.find("bad", 0, len(s))
+
+    if str_bad > str_not and str_not > 0:
+        if s[-1] == "!":
+            s = s[:str_not] + "good!"
+        else:
+            s = s[:str_not] + "good"
+    return s
 
 
 # F. front_back
@@ -52,8 +63,20 @@ def not_bad(s):
 
 
 def front_back(a, b):
-    # your code here
-    return
+    if len(a) % 2 == 0:
+        a_front = a[:len(a)//2]
+        a_back = a[len(a)//2:]
+    else:
+        a_front = a[:len(a)//2 + 1]
+        a_back = a[len(a)//2 + 1:]
+
+    if len(b) % 2 == 0:
+        b_front = b[:len(b)//2]
+        b_back = b[len(b)//2:]
+    else:
+        b_front = b[:len(b)//2 + 1]
+        b_back = b[len(b)//2 + 1:]
+    return a_front + b_front + a_back + b_back
 
 
 # Provided simple test() function used in main() to print
