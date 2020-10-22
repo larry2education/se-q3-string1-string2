@@ -4,7 +4,8 @@ Kenzie assignment: String1
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "Larry Scott with help from John and a Smarter Way Learn to Python"
+__author__ = """Larry Scott with help from John and
+a Smarter Way Learn to Python"""
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
